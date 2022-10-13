@@ -1,4 +1,5 @@
 def worl():
+    bucle = True
     while bucle:
         so = input('Windows o Linux? (w/l): ')
         if(so == 'w' or so == 'l'):
