@@ -1,9 +1,8 @@
 from modules.login import login
 from modules.interaction import *
 from modules.credentials import *
-from modules.so import worl
 from modules.download import downloadMedia
-from modules.dir import createDir
+from modules.dir import *
 from modules.upload import *
 from modules.menu import menu
 from instagrapi import Client
@@ -15,6 +14,10 @@ def main():
     if(os.path.exists(path) == False):
         createDir(path)
     
+    if(os.path.exists('./credentials/') == False):
+        path = './credentials'
+        createCredentials(path)
+
     cl = login()
     while cl == False:
         credentials()

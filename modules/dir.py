@@ -11,3 +11,9 @@ def createDir(path: str):
     os.mkdir(f'{path}/video/upload')
     os.mkdir(f'{path}/downloads')
     print('Carpetas creadas')
+
+def createCredentials(path: str):
+    os.mkdir(path)
+    file = open(f'{path}/credentials.txt', 'w')
+    file.close()
+    print('Archivo credentials.txt creado')

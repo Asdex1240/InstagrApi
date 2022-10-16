@@ -4,12 +4,14 @@ from instagrapi import Client
 
 
 def credentials():
-    
+    try:
         file = open("./credentials/credentials.txt", "w")
-        user = input("Usuario: ")
-        password = getpass.getpass("Contraseña: ")
-        file.writelines(user+"\n"+password)
-        file.close()
+    except:
+        print("No se encontró el archivo credentials.txt")
+    user = input("Usuario: ")
+    password = getpass.getpass("Contraseña: ")
+    file.writelines(user+"\n"+password)
+    file.close()
 
 def info(cl: Client):
     print("Informacion de la cuenta")
